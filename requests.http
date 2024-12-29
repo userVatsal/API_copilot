@@ -1,0 +1,40 @@
+GET http://localhost:5279/api/user
+Authorization: valid-token
+
+###
+POST http://localhost:5279/api/user
+Content-Type: application/json
+Authorization: valid-token
+
+{
+    "Id": "1",
+    "FirstName": "Brian",
+    "LastName": "Ramirez",
+    "Email": "BrianRamirez@mail.com",
+    "Department": "IT"
+}
+
+###
+GET http://localhost:5279/api/user/1
+Authorization: valid-token
+
+###
+PUT http://localhost:5279/api/user/1
+Content-Type: application/json
+Authorization: valid-token
+
+{
+    "Id": "1",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Email": "Doe@John.com",
+    "Department": "Sales"
+}
+
+###
+DELETE http://localhost:5279/api/user/1
+Authorization: valid-token
+
+###
+GET http://localhost:5279/exception
+Authorization: valid-token
